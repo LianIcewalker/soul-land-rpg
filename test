@@ -1,0 +1,62 @@
+"""{
+  "name": "soul-land-rpg",
+  "title": "Soul Land RPG (Teste Limitado)",
+  "version": "0.2.0",
+  "author": "Rukisa S Rodriguez",
+  "description": "Sistema de RPG baseado em Douluo Dalu para Foundry VTT.",
+  "scripts": [],
+  "styles": ["style.css"],
+  "packs": [],
+  "esmodules": [],
+  "languages": [],
+  "socket": false,
+  "initiative": "1d100",
+  "gridDistance": 1,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "vida",
+  "secondaryTokenAttribute": "mana"
+}"""
+"""
+<div class="soulland-sheet">
+  <h1>Soul Land RPG</h1>
+  <label>Nome: <input type="text" name="data.nome" /></label><br>
+  <label>Nível Espiritual: <input type="number" name="data.nivel" /></label><br>
+  <label>XP Atual: <input type="number" name="data.xp" /></label><br>
+  <label>XP para próximo nível: <input type="number" name="data.xpMax" /></label><br>
+  <label>Vida: <input type="number" name="data.vida" /></label><br>
+  <label>Mana: <input type="number" name="data.mana" /></label><br>
+  <label>Força: <input type="number" name="data.for" /></label>
+  <button onclick="rollAttribute('Força')">Rolar Força</button><br>
+  <label>Destreza: <input type="number" name="data.dex" /></label>
+  <button onclick="rollAttribute('Destreza')">Rolar Destreza</button><br>
+  <label>Espírito: <input type="number" name="data.esp" /></label>
+  <button onclick="rollAttribute('Espírito')">Rolar Espírito</button><br>
+  <label>Sabedoria: <input type="number" name="data.sab" /></label>
+  <button onclick="rollAttribute('Sabedoria')">Rolar Sabedoria</button><br>
+</div>
+<script>
+function rollAttribute(attrName) {
+  let roll = new Roll("1d100").roll({async: false});
+  roll.toMessage({ flavor: `Teste de ${attrName}` });
+}
+</script>
+"""
+"""
+.soulland-sheet {
+  background-color: #e0f7ff;
+  padding: 1em;
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+.soulland-sheet h1 {
+  text-align: center;
+  color: #004c6d;
+}
+.soulland-sheet label {
+  display: block;
+  margin: 5px 0;
+}
+button {
+  margin-left: 5px;
+}
+"""
