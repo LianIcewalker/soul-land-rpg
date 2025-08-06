@@ -1,0 +1,18 @@
+
+.soulland-sheet {
+  background-color: #e0f7ff;
+  padding: 1em;
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+.soulland-sheet h1 {
+  text-align: center;
+  color: #004c6d;
+}
+.soulland-sheet label {
+  display: block;
+  margin: 5px 0;
+}
+button {
+  margin-left: 5px;
+}
